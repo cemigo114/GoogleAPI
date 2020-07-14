@@ -1,0 +1,14 @@
+import requests
+import pyodbc
+#print(requests.__version__)
+#print(requests.__copyright__)
+
+# api-endpoint 
+URL = 'https://poweroutage.us/api/json_1_4/getcountyoutageinfo'
+# StateID is optional
+PARAMS = {'key':'Munich3789t!y96!7gh','StateID':'None'} 
+r = requests.get(url = URL, params = PARAMS)
+data = r.json() 
+length = len(data)
+#print(length)
+
